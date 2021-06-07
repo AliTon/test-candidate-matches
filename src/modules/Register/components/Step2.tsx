@@ -39,7 +39,7 @@ const Step2: React.FC<IStep2Props> = ({
       setValue('country', label);
       setValue('city', '');
     },
-    [dispatch]
+    [dispatch, setValue]
   );
 
   const getAvailableDepartments = React.useMemo(() => {
@@ -52,7 +52,7 @@ const Step2: React.FC<IStep2Props> = ({
     });
 
     return departments.map((value) => ({ label: value, value }));
-  }, [EmployersList]);
+  }, []);
 
   const getPlaceHolderText = () => {
     if (!currentCountryCities) {

@@ -1,5 +1,4 @@
 import { AxiosResponse } from 'axios';
-import { PayloadAction } from '@reduxjs/toolkit';
 import { takeLatest, call, put, select } from 'redux-saga/effects';
 import {
   GET_CITIES_BY_COUNTRY,

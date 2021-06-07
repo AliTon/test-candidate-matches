@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../../components/Footer';
 import './MainLayout.styles.scss';
 import { RootState } from '../../redux/reducers';
-import { IProfileReducerState } from '../../modules/Profile/redux/reducers/ProfileReducer';
 import { useSelector } from 'react-redux';
 
 interface IMainLayoutProps {
@@ -23,7 +22,7 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
     } else {
       history.push('/profile');
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, history]);
 
   return (
     <div className="content">

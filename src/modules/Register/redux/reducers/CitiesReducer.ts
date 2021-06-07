@@ -1,6 +1,5 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import {
-  GET_CITIES_BY_COUNTRY,
   GET_CITIES_BY_COUNTRY_SUCCESS,
   SET_LOADING
 } from '../actions/GetCities';

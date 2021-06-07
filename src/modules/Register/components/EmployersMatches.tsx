@@ -7,8 +7,6 @@ import EmployersList from '../../../_mock_data/employers.json';
 import {
   IEmployer,
   IEmployersMatchesProps,
-  IStep1Inputs,
-  IStep2Inputs
 } from '../interfaces';
 import Dashboard from '../../Dashboard';
 import { logIn } from '../../Profile/redux/actions/Profile';
@@ -34,7 +32,7 @@ const EmployersMatches: React.FC<IEmployersMatchesProps> = ({
       }
     });
     dispatch(getSuggestions(matches));
-  }, [EmployersList, values]);
+  }, [values, dispatch]);
 
   const handleProfileCreate = () => {
     dispatch(logIn(values));

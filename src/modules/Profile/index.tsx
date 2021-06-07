@@ -19,8 +19,8 @@ const Profile = () => {
 
   React.useEffect(() => {
     localStorage.setItem('oldReduxState', JSON.stringify(reduxState));
-  }, []);
-  console.log(profile, '>>>>>>>');
+  }, [reduxState]);
+
   return (
     <div className="profileContent">
       <div className="profileInfo">

@@ -19,7 +19,7 @@ const profileReducer = (
   switch (type) {
     case LOG_OUT:
       localStorage.clear();
-      return { ...state, isLoggedIn: false };
+      return { ...state, isLoggedIn: false, profile: {} };
     case LOG_IN:
       return { ...state, isLoggedIn: true, profile: payload.employer };
     default:

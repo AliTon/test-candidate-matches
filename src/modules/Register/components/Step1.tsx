@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input, SelectBox } from '../../../components/core';
-import { IStep1Inputs, IStep1Props } from '../interfaces';
+import { IStep1Props } from '../interfaces';
 import { GENDERS } from '../../../constants';
 
 import './Register.styles.scss';
@@ -15,7 +15,7 @@ const Step1: React.FC<IStep1Props> = ({
 }) => {
   const handleGenderChanged = React.useCallback((data) => {
     setValue('gender', data.label);
-  }, []);
+  }, [setValue]);
 
   const formValues = getValues();
   return (

@@ -5,6 +5,7 @@ import {
   REMOVE_ITEM
 } from '../actions/SuggestionManagement';
 import { ISuggestionsReducerState } from '../../interfaces';
+import { LOG_OUT } from '../../../Profile/redux/actions/Profile';
 
 const defaultState: ISuggestionsReducerState = {
   suggestions: [],
@@ -17,6 +18,8 @@ const reducer = (
 ) => {
   const { type, payload } = action;
   switch (type) {
+    case LOG_OUT:
+      return { ...state, suggestions: [], favorites: [] };
     case GET_SUGGESTIONS:
       return { ...state, suggestions: payload };
     case REMOVE_ITEM:
