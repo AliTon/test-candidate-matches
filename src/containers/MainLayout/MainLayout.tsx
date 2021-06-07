@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import './MainLayout.styles.scss';
 import { RootState } from '../../redux/reducers';
 import { useSelector } from 'react-redux';
+import { IProfileReducerState } from '../../modules/Profile/redux/reducers/ProfileReducer';
 
 interface IMainLayoutProps {
   children: JSX.Element;
@@ -12,8 +13,7 @@ interface IMainLayoutProps {
 
 const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
   const history = useHistory();
-  // @ts-ignore
-  const isLoggedIn: boolean = useSelector((state: RootState) => state.profile.isLoggedIn);
+  const { isLoggedIn }: IProfileReducerState = useSelector((state: RootState) => state.profile);
 
   React.useEffect(() => {
     if (!isLoggedIn) {

@@ -15,10 +15,11 @@ const Profile = () => {
     (state: RootState) => state.suggestions
   );
 
-  const reduxState = useSelector((state) => state);
+  const reduxState = useSelector((state: RootState) => state);
 
   React.useEffect(() => {
-    localStorage.setItem('oldReduxState', JSON.stringify(reduxState));
+    const { cities, ...otherState } = reduxState;
+    localStorage.setItem('oldReduxState', JSON.stringify(otherState));
   }, [reduxState]);
 
   return (

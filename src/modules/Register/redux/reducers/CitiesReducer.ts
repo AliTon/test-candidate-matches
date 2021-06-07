@@ -4,6 +4,7 @@ import {
   SET_LOADING
 } from '../actions/GetCities';
 import { ICitiesStateReducerState } from '../../interfaces';
+import { LOG_OUT } from '../../../Profile/redux/actions/Profile';
 
 const reducer = (
   state = {},
@@ -12,6 +13,8 @@ const reducer = (
   const { type, payload } = action;
   const stateClone: ICitiesStateReducerState = { ...state };
   switch (type) {
+    case LOG_OUT:
+      return {};
     case GET_CITIES_BY_COUNTRY_SUCCESS:
       stateClone[payload.country] = {
         cities: payload.list,
