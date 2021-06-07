@@ -12,9 +12,8 @@ interface IMainLayoutProps {
 
 const MainLayout: React.FC<IMainLayoutProps> = ({ children }) => {
   const history = useHistory();
-  const isLoggedIn: boolean = useSelector(
-    (state: RootState) => state.profile.isLoggedIn
-  );
+  // @ts-ignore
+  const isLoggedIn: boolean = useSelector((state: RootState) => state.profile.isLoggedIn);
 
   React.useEffect(() => {
     if (!isLoggedIn) {

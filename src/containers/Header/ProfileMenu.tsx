@@ -1,29 +1,23 @@
 import React from 'react';
 import './Header.styles.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { logOut } from '../../modules/Profile/redux/actions/Profile';
-import { RootState } from '../../redux/reducers';
+import { IMAGES_ENUM } from '../../constants';
 
 const ProfileMenu: React.FC = () => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const profile: any = useSelector((state: RootState) => state.profile.profile);
 
   const handleLogOut = () => {
     dispatch(logOut());
     history.push('/register');
   };
-
   return (
     <div className="menu">
       <img
-        src={`${
-          profile?.gender === 'Female'
-            ? 'https://www.w3schools.com/howto/img_avatar2.png'
-            : 'https://www.w3schools.com/howto/img_avatar.png'
-        }`}
-        alt=""
+        src={`${IMAGES_ENUM.USER}`}
+        alt="user"
       />
       <button onClick={() => handleLogOut()}>Log out</button>
     </div>

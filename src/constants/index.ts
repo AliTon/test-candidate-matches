@@ -9,7 +9,8 @@ enum GENDERS_ENUM {
 enum IMAGES_ENUM {
   'EMPTY' = 'https://cdn3.iconfinder.com/data/icons/rest/30/add_order-512.png',
   'MALE' = 'https://www.w3schools.com/howto/img_avatar.png',
-  'FEMALE' = 'https://www.w3schools.com/howto/img_avatar2.png'
+  'FEMALE' = 'https://www.w3schools.com/howto/img_avatar2.png',
+  'USER' = 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg',
 }
 
 const GENDERS: ISelectOptionValue[] = [

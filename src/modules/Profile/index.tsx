@@ -37,6 +37,10 @@ const Profile = () => {
           <div className="infoDesc">{profile?.email}</div>
         </div>
         <div className="infoPanel">
+          <div className="infoType">Gender</div>
+          <div className="infoDesc">{profile?.gender}</div>
+        </div>
+        <div className="infoPanel">
           <div className="infoType">Country</div>
           <div className="infoDesc">{profile?.country}</div>
         </div>

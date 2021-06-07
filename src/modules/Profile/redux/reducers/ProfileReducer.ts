@@ -8,7 +8,7 @@ export interface IProfileReducerState {
 }
 
 const initialState: IProfileReducerState = {
-  isLoggedIn: false
+  isLoggedIn: false,
 };
 
 const profileReducer = (
