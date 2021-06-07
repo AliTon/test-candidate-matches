@@ -1,0 +1,53 @@
+.stepContainer {
+    display: flex;
+    padding: 0
+}
+.input {
+    color: white;
+    background-color: #71598c;
+    border: none;
+    height: 25px;
+    width: 230px;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 0 5px 5px;
+}
+.wrapper {
+    padding: 85px;
+    h1 {
+        font-size: 40px;
+        color: white;
+    }
+}
+.input:focus{
+    height: 19px;
+    width: 224px;
+    outline: none;
+    border: 3px solid white;
+}
+.input::placeholder{
+    color: white;
+    opacity: .5;
+}
+.stepContainer {
+    .subBtn {
+        background: #00a1e0;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 14px;
+    }
+    .subBtn:hover {
+        background: #502674;
+        cursor: grab;
+    }
+}
+
+.justify-center {
+    justify-content: center;
+}

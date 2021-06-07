@@ -1,0 +1,40 @@
+.headerContent {
+  clear: both;
+  display: flex;
+  float: none;
+  position: relative;
+  margin: 0 auto 0 auto;
+  *zoom: 1;
+  height: 45px;
+  max-width: 1800px;
+  opacity: 1;
+  padding: 10px;
+  -webkit-transition: opacity 125ms ease-in-out;
+  transition: opacity 125ms ease-in-out;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+.menu img {
+  border-radius: 50%;
+}
+.menu button {
+  height: 50%;
+  margin: 10px 0px 10px 5px;
+  color: white;
+  background-color: #0275d8;
+  border-radius: 10px;
+}
+
+.headerLogo {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: 240px;
+    background-image: url(https://www.mentorcliq.com/hs-fs/hubfs/lpm-mq-web-assets/imgs/mentorcliQ-logo-20190405.png?width=718&height=128&name=mentorcliQ-logo-20190405.png);
+}
